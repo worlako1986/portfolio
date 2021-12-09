@@ -8,7 +8,8 @@ from django.conf.urls.static import static
 app_name = "jobs"
 
 urlpatterns = [
-    path('', views.home, name= "home")
+    path('', views.home, name= "home"),
+    path('jobs/<int:job_id>', views.detail, name="detail")
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
