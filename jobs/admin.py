@@ -8,7 +8,7 @@ class JobModelAdmin(admin.ModelAdmin):
     list_display = ["person","summery", "image"]
 
 class PersonModelAdmin(admin.ModelAdmin):
-    list_display = ["name", "about", "image"]
+    list_display = ["name", "email", "about", "image"]
 
 admin.site.register(Job, JobModelAdmin)
 admin.site.register(Person, PersonModelAdmin)

@@ -7,6 +7,11 @@ class Person(models.Model):
     name = models.CharField(max_length=64)
     about = models.CharField(max_length=200)
     image = models.ImageField(upload_to = "images/")
+    email = models.CharField(max_length=255, default="", blank=True)
+    github_link = models.CharField(max_length=255, default="", blank=True)
+    linkedin_link = models.CharField(max_length=255, default="", blank=True)
+    youtube_link = models.CharField(max_length=255, default="", blank=True)
+
 
     class Meta:
         db_table = "persons"
