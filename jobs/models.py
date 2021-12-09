@@ -23,6 +23,7 @@ class Job(models.Model):
 
     image = models.ImageField(upload_to = "images/")
     summery = models.CharField(max_length=200)
+    description = models.TextField(default="")
     person = models.ForeignKey(Person, null=True, blank=True, related_name="person_jobs", verbose_name="Person related jobs", on_delete=models.CASCADE)
 
     class Meta:
